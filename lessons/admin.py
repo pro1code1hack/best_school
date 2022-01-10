@@ -2,27 +2,11 @@ from ckeditor.widgets import CKEditorWidget
 from django.contrib import admin
 from django import forms
 
-from .models import Lesson_Video, Lesson
+from .models import Lesson
 
 
 # admin.site.register(Lesson)
 # admin.site.register(Lesson_Video)
-
-# @admin.register(Lesson)
-
-@admin.register(Lesson_Video)
-class LessonVideoAdmin(admin.ModelAdmin):
-    """
-    admin customization
-    """
-    list_display = ('id','ch_video_name', 'ch_video_link',)
-    list_display_links = ('ch_video_name', 'ch_video_link')
-    #list_filter = ('id',)
-    search_fields = ('ch_video_name',)
-
-
-
-
 
 
 class LessonAdminForm(forms.ModelForm):
@@ -55,12 +39,7 @@ class LessonAdmin(admin.ModelAdmin):
             'fields': ('ch_lesson_plan', 'ch_lesson_text',),
             'description': '%s' % 'Напиши план урока и сам текст к нему',
         }),
-        ('Section 3', {
-            'fields': ('i_video',),
-            'description': '%s' % 'А теперь прикрепи сюда видео, солнышко',
-        })
 
-        ,
     )
     form = LessonAdminForm      # this form allows us to edit it with CKE editor
     #inlines = [Video_Inline]

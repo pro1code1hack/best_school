@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.timezone import utc
 
-from school_users.models import UserAuth, UserProfile
+from school_users.models import  UserProfile
 # Create your models here.
 
 
@@ -38,7 +38,7 @@ class UserCourses(models.Model):
     dt_subscription_end = models.DateTimeField(verbose_name='Конец подписки')
 
     def __str__(self):  # self.i_course_id.ch_name
-        return f"{self.i_user_id.i_user_id}"
+        return f"{self.i_user_id}"
 
     class Meta:
         verbose_name_plural = 'Курсы пользователя'
