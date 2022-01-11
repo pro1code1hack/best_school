@@ -5,6 +5,14 @@ from school_users.models import  UserProfile
 # Create your models here.
 
 
+"""
+Преподователи 
+Кто тд тп
+Кто составил тест
+кто проверил тест
+"""
+
+
 class CourseInfo(models.Model):
     ch_name = models.CharField(max_length=130 , verbose_name='Название курса')
     ch_description = models.CharField(max_length=1500, verbose_name='Описание курса')

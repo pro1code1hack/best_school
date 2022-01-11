@@ -21,6 +21,11 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
-admin.site.index_title = "Sokil Academy"
+admin.site.index_title = "Meta Academy"
 admin.site.site_header = "Лучшая школа в мире"
 admin.site.site_title = "Лучшая школа в мире"
+
+
+"""
+Чекнуть виды тестов ещё раз 
+"""

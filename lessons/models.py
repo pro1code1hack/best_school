@@ -12,6 +12,9 @@ class Lesson(models.Model):
     ch_lesson_text = models.CharField(max_length=3000, verbose_name='Текст урока')
     ch_lesson_plan = models.CharField(max_length=1500, verbose_name='План урока')
 
+    def __str__(self):
+        return f"{self.ch_lesson_name}"
+
     class Meta:
         verbose_name = ("Урок")
         verbose_name_plural = ("Уроки")
