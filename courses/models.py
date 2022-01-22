@@ -26,7 +26,7 @@ class CourseInfo(models.Model):
 
 
 class SubscriptionType(models.Model):
-    ch_name = models.CharField(max_length=100, verbose_name = 'Название подписки')
+    ch_name = models.CharField(max_length=100, verbose_name = 'Название подписки')  #
     ch_description = models.CharField(max_length=800, verbose_name = 'Описание подписки')
     fl_price = models.FloatField(verbose_name='Цена')
 

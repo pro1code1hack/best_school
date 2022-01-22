@@ -26,13 +26,13 @@ class LessonAdmin(admin.ModelAdmin):
     """
     admin customization
     """
-    list_display = ('id','ch_lesson_name', 'i_course_id')
-    list_display_links = ('ch_lesson_name','i_course_id')
-    list_filter = ('i_course_id',)
+    list_display = ('id','ch_lesson_name', )
+    list_display_links = ('ch_lesson_name',)
+    list_filter = ('topic',)
     search_fields = ('ch_lesson_name',)
     fieldsets = (
         ('Section 1',{
-            'fields' : ('i_course_id', 'ch_lesson_name',),
+            'fields' : ('ch_lesson_name','topic'),
             'description': '%s' % 'Добавь урок и выбери курс к которому он относится',
         }),
         ('Section 2', {
